@@ -1,0 +1,6 @@
+<h2>אישור משתמשים</h2>
+<ul>
+    {% for user in users %}
+    <li>{{ user.email }} - <a href="{{ url_for('admin.approve_user', email=user.email) }}">אשר</a></li>
+    {% endfor %}
+</ul>
